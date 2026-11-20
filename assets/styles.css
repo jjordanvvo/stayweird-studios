@@ -318,3 +318,6 @@ svg { flex: none; }
 .footer summary, .news p, .card__name, .dd__panel a, .mmenu details a { font-weight: 650; }
 /* Buttons use the brand font without the distress filter so they stay crisp */
 .btn, .sizes button, .news button, .qa__sizes button, .fit__row button { font-family: var(--ink-font); font-weight: 700; }
+/* "New Releases": clean Helvetica/Arial bold, a little heavier, no distress */
+.block__title { font-family: Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: .02em; filter: none; -webkit-text-stroke: 1.2px currentColor; paint-order: stroke fill; }
+@media (max-width: 860px) { .block__title { -webkit-text-stroke: .7px currentColor; } }
