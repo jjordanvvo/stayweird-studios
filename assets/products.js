@@ -26,8 +26,8 @@ window.SW_COLLECTIONS = [
 /* Store-wide settings */
 window.SW_SETTINGS = {
   brand: "Stay Weird Studios",
-  freeShipping: 150,
+  freeShipping: 0, // 0 = free shipping on every order (first drop). Set e.g. 150 to require a minimum again.
   bundleDiscount: 0.15, // "Frequently bought together" discount
-  announcements: ["Free shipping on orders over $150", "Returns & exchanges", "New drop out now"],
+  announcements: ["Free shipping on our first drop", "Returns & exchanges", "New drop out now"],
   instagram: "https://instagram.com/"
 };

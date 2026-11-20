@@ -72,9 +72,9 @@
       return;
     }
     const sub = cart.reduce((n, l) => n + byId(l.id).price * l.qty, 0);
-    const left = Math.max(0, S.freeShipping - sub);
-    const pct = Math.min(100, (sub / S.freeShipping) * 100);
-    const ship = `<div class="ship">${left ? `You're ${money(left)} away from <b>free shipping</b>` : "You've unlocked <b>free shipping</b>"}
+    const left = S.freeShipping ? Math.max(0, S.freeShipping - sub) : 0;
+    const pct = S.freeShipping ? Math.min(100, (sub / S.freeShipping) * 100) : 100;
+    const ship = !S.freeShipping ? `<div class="ship"><b>Free shipping</b> on every order this drop</div>` : `<div class="ship">${left ? `You're ${money(left)} away from <b>free shipping</b>` : "You've unlocked <b>free shipping</b>"}
       <div class="ship__bar"><div class="ship__fill" style="width:${pct}%"></div><div class="ship__tag ${left ? "" : "done"}">${I.tag}</div></div><div class="ship__label">Free Shipping</div></div>`;
     const lines = cart.map((l, i) => {
       const p = byId(l.id);
