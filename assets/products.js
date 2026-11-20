@@ -8,7 +8,7 @@
 */
 window.SW_PRODUCTS = [
   { id: "sw-flannel", name: "SW Plaid Flannel", price: 120, sizes: ["S", "M", "L", "XL", "XXL"], soldOut: [], collections: ["tops", "new-items", "best-sellers"], images: [], placeholderCount: 4,
-    description: "Plaid flannel button-up with embroidered SW chest logo and paint-splatter detail." },
+    description: "Black and brown flannel with a light fade and a semi-cropped fit. Features light paint splatter and patchwork stitching." },
   { id: "charcoal-baggy-sweatpants", name: "Charcoal Baggy Sweatpants", price: 80, sizes: ["S", "M", "L", "XL", "XXL"], soldOut: [], collections: ["bottoms", "new-items", "best-sellers"], images: [], placeholderCount: 4,
     description: "Charcoal grey sweatpants with a light wash and a baggy fit. Features hidden zippers, patchwork stitching and an elastic waistband." },
   { id: "charcoal-three-quarter-shorts", name: "Charcoal 3/4 Shorts", price: 80, sizes: ["S", "M", "L", "XL", "XXL"], soldOut: [], collections: ["bottoms", "new-items", "best-sellers"], images: [], placeholderCount: 4,
