@@ -158,10 +158,7 @@ svg { flex: none; }
 .hero__mark img { width: 100%; height: auto; }
 @media (max-width: 860px) { .hero__mark { width: 50vw; bottom: 64px; } }
 .hero__link { position: absolute; left: 50%; bottom: 44px; transform: translateX(-50%); color: #fff; font-size: 14px; text-transform: uppercase; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
-@media (max-width: 860px) { .hero { height: 66svh; min-height: 420px; } .hero__mark { position: absolute; left: 50%; bottom: 96px; transform: translateX(-50%); width: min(44vw, 620px); pointer-events: none; }
-.hero__mark img { width: 100%; height: auto; }
-@media (max-width: 860px) { .hero__mark { width: 50vw; bottom: 64px; } }
-.hero__link { bottom: 28px; } }
+@media (max-width: 860px) { .hero { height: 66svh; min-height: 420px; } .hero__link { bottom: 28px; } }
 
 /* ---------- Product grid ---------- */
 .block { padding: 24px 8px 30px; }
