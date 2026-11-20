@@ -112,7 +112,7 @@
         <a class="nav-link only-lg" href="/shop?c=new-items">New Items</a>
         <button class="nav-link only-lg" data-open="search">${I.search}Search</button>
       </div>
-      <a class="logo" href="/">${esc(S.brand)}</a>
+      <a class="logo" href="/" aria-label="${esc(S.brand)} home"><img class="logo--dark" src="/images/logo-black.png" alt="${esc(S.brand)}"><img class="logo--light" src="/images/logo-white.png" alt=""></a>
       <div class="header__right">
         <a class="nav-link only-lg" href="/contact">${I.user}Account</a>
         <a class="icon only-sm" href="/contact" aria-label="Account">${I.user}</a>
@@ -125,7 +125,7 @@
     </div>`;
     const panels = `<div class="overlay" id="overlay" data-close></div>
       <aside class="drawer drawer--menu mmenu" id="panel-menu" aria-label="Menu">
-        <div class="mmenu__head"><div><button class="x-btn" data-close aria-label="Close menu">${I.close}</button></div><a class="logo" href="/" style="font-size:26px">${esc(S.brand)}</a><div></div></div>
+        <div class="mmenu__head"><div><button class="x-btn" data-close aria-label="Close menu">${I.close}</button></div><a class="logo logo--sm" href="/"><img src="/images/logo-black.png" alt="${esc(S.brand)}"></a><div></div></div>
         <div class="mmenu__body">
           <details><summary>Shop ${I.down}</summary>${shopLinks.map(([t, h]) => `<a href="${h}">${t}</a>`).join("")}</details>
           <a class="mmenu__link" href="/shop?c=new-items">New Items</a>
@@ -133,7 +133,7 @@
         </div>
       </aside>
       <aside class="drawer drawer--cart" id="panel-cart" aria-label="Cart">
-        <div class="cart__head"><span class="logo">${esc(S.brand)}</span><button class="cart__close" data-close aria-label="Close cart">${I.close}</button></div>
+        <div class="cart__head"><span class="logo logo--sm"><img src="/images/logo-black.png" alt="${esc(S.brand)}"></span><button class="cart__close" data-close aria-label="Close cart">${I.close}</button></div>
         <div class="cart__body" id="cart-body"></div>
         <div class="cart__foot" id="cart-foot" hidden>
           <div class="cart__sub"><span>Subtotal</span><span id="cart-sub"></span></div>
