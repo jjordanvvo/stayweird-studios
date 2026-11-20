@@ -81,7 +81,8 @@
   }
 
   const main = c => ["tops", "bottoms"].includes(c);
-  const recs = SW_PRODUCTS.filter(x => x.id !== p.id && !x.collections.some(c => main(c) && p.collections.includes(c))).slice(0, 2);
+  const others = SW_PRODUCTS.filter(x => x.id !== p.id);
+  const recs = [...new Set([...others.filter(x => !x.collections.some(c => main(c) && p.collections.includes(c))), ...others])].slice(0, 2);
   document.getElementById("recs").innerHTML = recs.map(SW_card).join("");
   document.getElementById("write-review").addEventListener("click", () => SW_toast("Reviews will turn on once the store backend is set up"));
 })();

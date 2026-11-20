@@ -166,6 +166,7 @@ svg { flex: none; }
 @media (max-width: 860px) { .block { padding: 18px 6px 24px; } .block__title { font-size: 22px; padding-bottom: 14px; } }
 .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .grid--tight { gap: 6px; }
+@media (min-width: 861px) { .grid--3 { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 860px) { .grid { grid-template-columns: repeat(2, 1fr); gap: 10px 8px; } }
 
 .card { position: relative; display: block; }

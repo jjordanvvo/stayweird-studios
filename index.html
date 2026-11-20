@@ -30,6 +30,7 @@
 <script>
   document.getElementById("home-grid").innerHTML =
     SW_PRODUCTS.filter(p => p.collections.includes("new-items")).slice(0, 8).map(SW_card).join("");
+  if (SW_PRODUCTS.length === 3) document.getElementById("home-grid").classList.add("grid--3");
 </script>
 </body>
 </html>
