@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..900&display=swap");
 /* Stay Weird Studios — theme. Swap fonts/colors here once branding is final. */
 :root {
   --bg: #ffffff;
@@ -300,3 +301,20 @@ svg { flex: none; }
 .contact-form input, .contact-form textarea { width: 100%; border: 1px solid #000; padding: 12px; font: inherit; }
 .contact-form textarea { min-height: 140px; resize: vertical; }
 .contact-form .btn { width: 100%; }
+
+/* ---------- Distressed brand type (matches the logo) ---------- */
+:root { --ink-font: "Inter", Helvetica, Arial, sans-serif; }
+/* Big headings */
+.block__title, .coll__title, .news h2, .reviews h2, .recs h2, .page h1 {
+  font-family: var(--ink-font); font-weight: 800; letter-spacing: -0.035em; filter: url(#ink-lg);
+}
+.coll__title, .page h1, .reviews h2 { font-weight: 800; }
+/* Small labels and sub titles */
+.nav-link, .ann__slide, .hero__link, .dd__panel a, .mmenu summary, .mmenu__link, .mmenu details a,
+.footer summary, .acc summary, .fbt h2, .fit__title, .ship, .news p, .pdp__head h1, .pdp__head .price,
+.card__name, .line__name, .cart__sub, .qa__top span, .block__sub {
+  font-family: var(--ink-font); font-weight: 700; filter: url(#ink-sm);
+}
+.footer summary, .news p, .card__name, .dd__panel a, .mmenu details a { font-weight: 650; }
+/* Buttons use the brand font without the distress filter so they stay crisp */
+.btn, .sizes button, .news button, .qa__sizes button, .fit__row button { font-family: var(--ink-font); font-weight: 700; }

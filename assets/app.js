@@ -154,7 +154,20 @@
         ${acc("Policies", [["Privacy Policy", "/privacy"], ["Terms of Service", "/terms"], ["Refund Policy", "/shipping"]])}
         <div class="footer__bottom"><a href="${S.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${I.ig}</a><span>© ${new Date().getFullYear()} ${esc(S.brand)}</span></div>
       </footer>`;
-    document.body.insertAdjacentHTML("afterbegin", ann + header + panels);
+    // Distressed-ink filters for headings (ink-lg) and small labels (ink-sm). Text keeps its own color.
+    const inkFilter = (id, warpFreq, warp, blur, slope, cut, grainFreq, keep) => `
+      <filter id="${id}" x="-8%" y="-30%" width="116%" height="160%" color-interpolation-filters="sRGB">
+        <feTurbulence type="fractalNoise" baseFrequency="${warpFreq}" numOctaves="2" seed="4" result="w"/>
+        <feDisplacementMap in="SourceGraphic" in2="w" scale="${warp}" xChannelSelector="R" yChannelSelector="G" result="d"/>
+        <feGaussianBlur in="d" stdDeviation="${blur}" result="b"/>
+        <feComponentTransfer in="b" result="ink"><feFuncA type="linear" slope="${slope}" intercept="${cut}"/></feComponentTransfer>
+        <feTurbulence type="fractalNoise" baseFrequency="${grainFreq}" numOctaves="1" seed="9" result="n"/>
+        <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -16 ${keep}" result="grain"/>
+        <feComposite in="ink" in2="grain" operator="in"/>
+      </filter>`;
+    const inkDefs = `<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+      ${inkFilter("ink-lg", 0.03, 3, 1.4, 8, -3.2, 0.32, 11.2)}${inkFilter("ink-sm", 0.08, 0.9, 0.55, 4.5, -1.45, 0.55, 12.6)}</defs></svg>`;
+    document.body.insertAdjacentHTML("afterbegin", inkDefs + ann + header + panels);
     document.body.insertAdjacentHTML("beforeend", footer);
   }
 
